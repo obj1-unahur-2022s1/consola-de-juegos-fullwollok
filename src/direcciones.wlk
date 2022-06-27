@@ -1,5 +1,11 @@
- import wollok.game.*
+import wollok.game.*
+import juego.*
 import individuos.*
+import musica.*
+import bombas.* 
+import elementos.*
+import nivel.*
+import consola.*
 
 object direcciones {
 

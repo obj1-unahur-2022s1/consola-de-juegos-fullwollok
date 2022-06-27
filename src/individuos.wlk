@@ -1,8 +1,11 @@
 import wollok.game.*
 import juego.*
-import bombas.*
 import direcciones.*
+import musica.*
+import bombas.* 
 import elementos.*
+import nivel.*
+import consola.*
 
 class Individuos{
 

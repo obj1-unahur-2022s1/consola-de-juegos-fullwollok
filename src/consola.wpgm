@@ -1,8 +1,14 @@
-import consola.*
 import wollok.game.*
+import juego.*
+import individuos.*
+import direcciones.*
+import musica.*
+import bombas.* 
+import elementos.*
+import nivel.*
+import consola.*
 
 program juegos {
-
 	consola.iniciar()
 	game.start()
 }

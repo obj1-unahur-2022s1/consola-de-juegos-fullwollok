@@ -8,7 +8,7 @@ import juego.*
 
 
 program Bomberman {
-	juegoBomberman.iniciar()
+	juegoBomberman.comenzar()
 	game.start()
 
 }

@@ -1,6 +1,11 @@
 import wollok.game.*
-import elementos.*
+import juego.*
 import individuos.*
+import direcciones.*
+import musica.* 
+import elementos.*
+import nivel.*
+import consola.*
 
 class Bomba{
 	var property position
