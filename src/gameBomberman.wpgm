@@ -1,14 +1,14 @@
-
 import wollok.game.*
 import individuos.*
 import direcciones.*
-import nivel.*
+import juego.*
 import bombas.* 
 import elementos.*
+import juego.*
 
 
 program Bomberman {
-	juego.iniciar()
+	juegoBomberman.iniciar()
 	game.start()
 
 }

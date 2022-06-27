@@ -1,5 +1,10 @@
 import wollok.game.* 
 import juego.*
+import individuos.*
+import direcciones.*
+import juego.*
+import bombas.* 
+import elementos.*
 
 object consola {
 
@@ -9,9 +14,9 @@ object consola {
 		new Juego(color = "Rojo"),
 		new Juego(color = "Azul"),
 		new Juego(color = "Naranja"),
-		new Juego(color = "Violeta")
+		juegoBomberman
 	]
-	var menu 
+	var menu
 	
 	method initialize(){
 		game.height(12)

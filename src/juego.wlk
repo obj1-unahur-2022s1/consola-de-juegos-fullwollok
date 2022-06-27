@@ -1,20 +1,28 @@
 import wollok.game.*
-import consola.*
 import elementos.*
 import direcciones.*
 import individuos.*
+import wollok.game.*
+import consola.*
 
-	/* 
+class Juego {
 	var property position = null
 	var property color 
 	
-	
+	method iniciar(){
+        game.addVisual(object{method position()= game.center() method text() = "Juego "+color + " - <q> para salir"})		
+	}
 	
 	method terminar(){
 
 	}
 	method image() = "juego" + color + ".png"
-	*/
+	
+
+}
+
+
+
 object musicaNivel{
 	var property ost = game.sound("StageTheme.mp3")
 
@@ -45,12 +53,15 @@ object musicaPerder{
 	}
 }
 
+object menu{
+	method agregarItem(juego){}
+	method dibujar(){}
+	method itemSeleccionado(){}
+}
 
-
-class Juego {
-	var property color
-	var property position = null
-	var juegoIniciado = false
+object juegoBomberman{
+	var property position
+	
 	method iniciar(){
 		game.title("Bomberman")
 		game.height(13)
@@ -62,15 +73,16 @@ class Juego {
 		musicaNivel.play()	
 		game.start()
 	}
+	
 	method terminar(){
-		return game.stop()
-		
+		game.stop()
 	}
-	method image() = "juego" + color + ".png"
 }
 
 object pantallaDeInicio{
 	var imagen = false
+	method agregarItem(){}
+	
 	method iniciarAnimacion(){
 		game.onTick(250,"Animacion del menu",{self.cambiar()})
 	}
@@ -89,29 +101,19 @@ object pantallaDeInicio{
 		else
 			return "bombermanInicio.png"
 	}
+	
+	
 }
 
 object pantallaDePerder{
 
-	var imagen = false
+	var imagen = true
 	method iniciarAnimacion(){
-		game.onTick(250,"Animacion del derrota",{self.cambiar()})
+		game.onTick(250,"Animacion del derrota",{self.image()})
 	}
-	method terminarAnimacion(){
-		game.removeTickEvent("Animacion del derrota")
-	}
-	method cambiar(){
-		if(imagen)
-			imagen = false
-		else
-			imagen = true
-	}
-	method image() {
-		if(imagen)
-			return "victoria.png"
-		else
-			return "victoria2.png"
-	}
+
+	method image(){return "perder.jpg"	}
+
 }
 	
 
@@ -130,16 +132,13 @@ object pantallaDeVictoria{
 		else
 			imagen = true
 	}
-	method image() {
+	method image(){
 		if(imagen)
-			return "perder.png"
+			return "victoria.png"
 		else
-			return "perder2.png"
+			return "victoria2.png"
 	}
-	
 }
-
-
 
 
 
@@ -297,5 +296,4 @@ object nivel3 inherits Nivel {
 		ene5.position(game.at(16, 9))
 	}
 }
-
 

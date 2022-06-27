@@ -57,6 +57,7 @@ class Explosion{
 	method chocarConIndividuo(quien){
 		quien.explotar()
 	}
+	method explotar(){}
 }
 
 

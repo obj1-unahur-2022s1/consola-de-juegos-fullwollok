@@ -1,5 +1,5 @@
 import wollok.game.*
-import nivel.*
+import juego.*
 import bombas.*
 import direcciones.*
 import elementos.*
@@ -18,13 +18,14 @@ class Individuos{
 	
 }
 
+
 object protagonista inherits Individuos{
 	var property image = "bombermanDerecha.png"
 	var property position = game.at(1,1)
 	var property vidas=3
 	var property direccion = null
 	var property nivel = 1
-	
+
 	
 	method tirarBomba(){
 		const bomba = new Bomba(position=self.position().clone(),image = 'bomba.png')
@@ -60,7 +61,6 @@ object protagonista inherits Individuos{
 			self.morir()
 			musicaNivel.stop()
 			musicaPerder.play()
-			game.allVisuals().forEach{ visual => game.removeVisual(visual)}
 			game.addVisualIn(pantallaDePerder,game.at(0,0))	}
 			pantallaDePerder.iniciarAnimacion()
 			
