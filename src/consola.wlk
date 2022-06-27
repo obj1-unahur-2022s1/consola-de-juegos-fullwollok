@@ -14,8 +14,8 @@ object consola {
 		new Juego(color = "Rojo"),
 		new Juego(color = "Azul"),
 		new Juego(color = "Naranja"),
-		juegoBomberman
-	]
+		juegoBomberman]
+		
 	var menu
 	
 	method initialize(){

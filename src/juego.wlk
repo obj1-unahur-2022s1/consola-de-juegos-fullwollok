@@ -5,9 +5,9 @@ import individuos.*
 import wollok.game.*
 import consola.*
 
-class Juego {
+class Juego{
 	var property position = null
-	var property color 
+	var property color = 'Violeta'
 	
 	method iniciar(){
         game.addVisual(object{method position()= game.center() method text() = "Juego "+color + " - <q> para salir"})		
@@ -21,7 +21,7 @@ class Juego {
 
 }
 
-
+///////////////////////////////////////////
 
 object musicaNivel{
 	var property ost = game.sound("StageTheme.mp3")
@@ -53,14 +53,9 @@ object musicaPerder{
 	}
 }
 
-object menu{
-	method agregarItem(juego){}
-	method dibujar(){}
-	method itemSeleccionado(){}
-}
 
-object juegoBomberman{
-	var property position
+object juegoBomberman inherits Juego{
+	
 	
 	method iniciar(){
 		game.title("Bomberman")
@@ -112,7 +107,7 @@ object pantallaDePerder{
 		game.onTick(250,"Animacion del derrota",{self.image()})
 	}
 
-	method image(){return "perder.jpg"	}
+	method image(){return "perder.jpg"}
 
 }
 	
