@@ -18,7 +18,6 @@ class Individuos{
 	
 }
 
-
 object protagonista inherits Individuos{
 	var property image = "bombermanDerecha.png"
 	var property position = game.at(1,1)

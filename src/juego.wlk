@@ -49,6 +49,7 @@ object musicaPerder{
 
 class Juego {
 	var property color
+	var property position = null
 	var juegoIniciado = false
 	method iniciar(){
 		game.title("Bomberman")
@@ -60,6 +61,10 @@ class Juego {
 		keyboard.enter().onPressDo({nivel1.configuracion()})  
 		musicaNivel.play()	
 		game.start()
+	}
+	method terminar(){
+		return game.stop()
+		
 	}
 }
 
@@ -130,7 +135,10 @@ object pantallaDeVictoria{
 		else
 			return "perder2.png"
 	}
+	
 }
+
+
 
 
 
