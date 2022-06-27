@@ -1,20 +1,8 @@
 import wollok.game.*
-import consola.*
 import elementos.*
 import direcciones.*
 import individuos.*
 
-	/* 
-	var property position = null
-	var property color 
-	
-	
-	
-	method terminar(){
-
-	}
-	method image() = "juego" + color + ".png"
-	*/
 object musicaNivel{
 	var property ost = game.sound("StageTheme.mp3")
 
@@ -48,7 +36,6 @@ object musicaPerder{
 
 
 class Juego {
-	var property color
 	var juegoIniciado = false
 	method iniciar(){
 		game.title("Bomberman")
@@ -288,5 +275,4 @@ object nivel3 inherits Nivel {
 		ene5.position(game.at(16, 9))
 	}
 }
-
 

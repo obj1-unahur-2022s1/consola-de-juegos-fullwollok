@@ -1,0 +1,18 @@
+
+import wollok.game.*
+import individuos.*
+import direcciones.*
+import nivel.*
+import bombas.* 
+import elementos.*
+
+
+program Bomberman {
+	juego.iniciar()
+	game.start()
+
+}
+
+
+
+	
