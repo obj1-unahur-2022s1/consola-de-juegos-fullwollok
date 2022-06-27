@@ -66,6 +66,7 @@ class Juego {
 		return game.stop()
 		
 	}
+	method image() = "juego" + color + ".png"
 }
 
 object pantallaDeInicio{
