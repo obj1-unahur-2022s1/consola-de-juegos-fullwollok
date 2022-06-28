@@ -1,9 +1,6 @@
-# Consola de Juegos
+## BOMBERMAN
 
-## Elección del Juego
+![bomberman](https://user-images.githubusercontent.com/83320898/176077394-86893d3e-bc61-4449-9f2e-0f520abf87f3.png)
 
-El juego que debe programar cada equipo es de libre elección. Puede ser cualquier juego que uds quieran implementar, algo totalmente nuevo o replicar un juego que ya existe, como por ejemplo el Tetrix. Apelamos a su creatividad pero para conseguir algo de inspiración pueden revisar en la página de wollok donde hay varios juegos y ejemplos.
-
-## Integración
-
-Pero no todo es tán fácil. El juego que realicen lo deberán integrar a esta consola de juegos. Van a tener que revisar el código, entender como integrarse y luego programar el juego. :-)
+## Como se juega
+Los controles del juego son simples, utilice las flechas para mover el personaje, la barra espaciadora para colocar una bomba y ten cuidado, ¡las bombas pueden matarte!(son traicioneras) 
