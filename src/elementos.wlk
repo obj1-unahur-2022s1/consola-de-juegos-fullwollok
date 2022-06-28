@@ -123,7 +123,7 @@ object paredesNivel1 {
 								game.at(4,7),game.at(9,4),game.at(6,1),game.at(13,2),game.at(15,2),	game.at(14,1),game.at(3,2),
 							game.at(1,7),game.at(1,9),game.at(2,11),game.at(8,11),game.at(9,10),game.at(6,11),game.at(9,1),
 							game.at(7,2),game.at(7,4),game.at(7,5),game.at(3,4),game.at(3,6),game.at(3,10),game.at(7,8),
-								game.at(11,11),game.at(12,11),game.at(13,11),game.at(13,8),game.at(13,6),game.at(11,8),game.at(11,4),
+							game.at(11,11),game.at(12,11),game.at(13,11),game.at(13,8),game.at(13,6),game.at(11,8),game.at(11,4),
 								game.at(11,2),game.at(11,1),game.at(19,11),game.at(19,10),game.at(17,11),game.at(16,1),game.at(15,8),
 								game.at(15,11),game.at(19,1),game.at(19,2),game.at(19,3),game.at(17,7),game.at(18,7),game.at(19,5)]
 

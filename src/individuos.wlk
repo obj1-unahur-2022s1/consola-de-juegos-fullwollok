@@ -28,12 +28,19 @@ object protagonista inherits Individuos{
 	var property vidas=3
 	var property direccion = null
 	var property nivel = 1
+	
+	method volverAlInicio(){
+		position = game.at(1, 1)
+		game.addVisual(self)
+	}
 
 	
 	method tirarBomba(){
 		const bomba = new Bomba(position=self.position().clone(),image = 'bomba.png')
-		game.addVisual(bomba)
-		bomba.spawn()}
+		if(position!=game.at(1,1)){
+			game.addVisual(bomba)
+			bomba.spawn()}
+		}
 
 	method chocarConEnemigo(enemigo){
 		self.perderVida()		
@@ -53,7 +60,8 @@ object protagonista inherits Individuos{
 	
 	override method perderVida(){
 		vidas = vidas - 1
-		position = game.at(1, 1)
+		game.removeVisual(self)
+		game.schedule(510,{ => self.volverAlInicio() })
 		if(vidas == 2){
 			corazones.cambiarACorazones2()
 		}
@@ -61,7 +69,7 @@ object protagonista inherits Individuos{
 			corazones.cambiarACorazones1()
 		}
 		else{
-			self.morir()
+			game.clear()
 			musicaNivel.stop()
 			musicaPerder.play()
 			game.addVisualIn(pantallaDePerder,game.at(0,0))	}
@@ -83,7 +91,7 @@ object protagonista inherits Individuos{
 		else if(nivel==3){
 			musicaNivel.stop()
 			musicaFinal.play()
-			game.allVisuals().forEach{ visual => game.removeVisual(visual)}
+			game.clear()
 			game.addVisualIn(pantallaDeVictoria,game.at(0,0))
 			pantallaDeVictoria.iniciarAnimacion()
 		}
@@ -96,7 +104,7 @@ object protagonista inherits Individuos{
 
 class Enemigo inherits Individuos{
 	var property position = null
-	var property image='enem1.png'
+	var property image
 	var property direccion = izquierda
 	const sentidos = [ izquierda, derecha, arriba, abajo ]
 

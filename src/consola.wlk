@@ -19,8 +19,8 @@ object consola {
 	var menu
 	
 	method initialize(){
-		game.height(12)
-		game.width(17)
+		game.height(13)
+		game.width(21)
 		game.title("Consola de juegos")
 	}
 	
@@ -43,6 +43,7 @@ object consola {
 	method hacerTerminar(juego){
 		juego.terminar()
 		game.clear()
+		game.stop()
 		self.iniciar()
 	}
 }

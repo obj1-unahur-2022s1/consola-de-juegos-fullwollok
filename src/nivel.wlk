@@ -87,11 +87,11 @@ class Nivel{
 
 
 object nivel1 inherits Nivel {
-	var ene1 = new Enemigo()
-	var ene2 = new Enemigo()
-	var ene3 = new Enemigo()
-	var ene4 = new Enemigo()
-	var ene5 = new Enemigo()
+	var ene1 = new Enemigo(image='enem1.png')
+	var ene2 = new Enemigo(image='enem1.png')
+	var ene3 = new Enemigo(image='enem1.png')
+	var ene4 = new Enemigo(image='enem1.png')
+	var ene5 = new Enemigo(image='enem1.png')
 	
 	override method configuracion() {
 		super()
@@ -129,11 +129,11 @@ object nivel1 inherits Nivel {
 }
 
 object nivel2 inherits Nivel {
-	var ene1 = new Enemigo()
-	var ene2 = new Enemigo()
-	var ene3 = new Enemigo()
-	var ene4 = new Enemigo()
-	var ene5 = new Enemigo()
+	var ene1 = new Enemigo(image='enem2.png')
+	var ene2 = new Enemigo(image='enem2.png')
+	var ene3 = new Enemigo(image='enem2.png')
+	var ene4 = new Enemigo(image='enem2.png')
+	var ene5 = new Enemigo(image='enem2.png')
 	
 	override method configuracion() {
 		super()
@@ -147,11 +147,11 @@ object nivel2 inherits Nivel {
 		game.whenCollideDo(ene4,{elemento=>elemento.chocarConIndividuo(ene4)})
 		game.whenCollideDo(ene5,{elemento=>elemento.chocarConIndividuo(ene5)})
 		game.whenCollideDo(protagonista,{enemigo => protagonista.chocarConIndividuo(enemigo) })
-		game.onTick(600,"mover enemigo",{ene1.moverse()})	
-		game.onTick(600,"mover enemigo",{ene2.moverse()})	
-		game.onTick(600,"mover enemigo",{ene3.moverse()})	
-		game.onTick(600,"mover enemigo",{ene4.moverse()})	
-		game.onTick(600,"mover enemigo",{ene5.moverse()})	
+		game.onTick(500,"mover enemigo",{ene1.moverse()})	
+		game.onTick(500,"mover enemigo",{ene2.moverse()})	
+		game.onTick(500,"mover enemigo",{ene3.moverse()})	
+		game.onTick(500,"mover enemigo",{ene4.moverse()})	
+		game.onTick(500,"mover enemigo",{ene5.moverse()})	
 		}
 
 	override method individuos(){
@@ -179,11 +179,11 @@ object nivel2 inherits Nivel {
 
 
 object nivel3 inherits Nivel {
-	var ene1 = new Enemigo()
-	var ene2 = new Enemigo()
-	var ene3 = new Enemigo()
-	var ene4 = new Enemigo()
-	var ene5 = new Enemigo()
+	var ene1 = new Enemigo(image='enem3.png')
+	var ene2 = new Enemigo(image='enem3.png')
+	var ene3 = new Enemigo(image='enem3.png')
+	var ene4 = new Enemigo(image='enem3.png')
+	var ene5 = new Enemigo(image='enem3.png')
 	
 	override method configuracion() {
 		super()
@@ -197,11 +197,11 @@ object nivel3 inherits Nivel {
 		game.whenCollideDo(ene4,{elemento=>elemento.chocarConIndividuo(ene4)})
 		game.whenCollideDo(ene5,{elemento=>elemento.chocarConIndividuo(ene5)})
 		game.whenCollideDo(protagonista,{enemigo => protagonista.chocarConIndividuo(enemigo) })
-		game.onTick(600,"mover enemigo",{ene1.moverse()})	
-		game.onTick(600,"mover enemigo",{ene2.moverse()})	
-		game.onTick(600,"mover enemigo",{ene3.moverse()})	
-		game.onTick(600,"mover enemigo",{ene4.moverse()})	
-		game.onTick(600,"mover enemigo",{ene5.moverse()})	
+		game.onTick(200,"mover enemigo",{ene1.moverse()})	
+		game.onTick(200,"mover enemigo",{ene2.moverse()})	
+		game.onTick(200,"mover enemigo",{ene3.moverse()})	
+		game.onTick(200,"mover enemigo",{ene4.moverse()})	
+		game.onTick(200,"mover enemigo",{ene5.moverse()})	
 		}
 
 	override method individuos(){
