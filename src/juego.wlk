@@ -7,12 +7,14 @@ import elementos.*
 import nivel.*
 import consola.*
 
+
 class Juego{
 	var property position = null
 	var property color = 'Violeta'
 
 	method iniciar(){
         game.addVisual(object{method position()= game.center() method text() = "Juego "+color + " - <q> para salir"})
+
 	}
 	
 	method terminar(){
@@ -20,9 +22,13 @@ class Juego{
 	method image() = "juego" + color + ".png"
 }
 
+
+//////////////////////////////////////////////
 object juegoBomberman inherits Juego{
 
-	method initialize(){
+
+	override method iniciar(){
+	//	game.clear()
 		game.title("Bomberman")
 		game.height(13)
 		game.width(21)
@@ -30,7 +36,7 @@ object juegoBomberman inherits Juego{
 		game.addVisualIn(pantallaDeInicio,game.at(0,0))
 		pantallaDeInicio.iniciarAnimacion()
 		keyboard.enter().onPressDo({nivel1.configuracion()})  
-//		musicaNivel.play()	
-	//	game.start()
+		musicaNivel.play()	
+//		game.start()
 	}
 }

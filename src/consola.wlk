@@ -38,6 +38,8 @@ object consola {
 		keyboard.q().onPressDo{self.hacerTerminar(juego)}
 		juego.iniciar()
 	}
+	
+	
 	method hacerTerminar(juego){
 		juego.terminar()
 		game.clear()
