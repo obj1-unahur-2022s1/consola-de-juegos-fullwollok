@@ -22,13 +22,15 @@ class Bomba{
 	}
 
 	method explosionCruz() {
-		var exp1 = new Explosion()
-		var exp2 = new Explosion()
-		var exp3 = new Explosion()
-		var exp4 = new Explosion()
-		var exp5 = new Explosion()
 		var x = self.position().x()
 		var y = self.position().y()
+		var exp1 = new Explosion(position = game.at(x, y))
+		var exp2 = new Explosion(position =game.at(x + 1, y) )
+		var exp3 = new Explosion(position = game.at(x - 1, y))
+		var exp4 = new Explosion(position = game.at(x, y + 1))
+		var exp5 = new Explosion(position =  game.at(x, y - 1))
+		
+		
 		const todasLasExp = #{ exp1, exp2, exp3, exp4, exp5 }
 		
 		game.addVisualIn(exp1, game.at(x, y))
