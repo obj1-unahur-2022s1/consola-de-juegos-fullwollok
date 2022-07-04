@@ -28,6 +28,11 @@ object pantallaDeInicio{
 		else
 			return "bombermanInicio.png"
 	}
+	method volverAConsola() {
+		game.clear()
+		musicaNivel.stop()
+		consola.iniciar()
+	}
 }
 
 object pantallaDePerder{
@@ -70,6 +75,7 @@ class Nivel{
 
 	method keyboard(){
 	keyboard.space().onPressDo {protagonista.tirarBomba()}
+	keyboard.p().onPressDo({pantallaDeInicio.volverAConsola()})
 	}
 	
 	method configuracion() {
@@ -219,4 +225,5 @@ object nivel3 inherits Nivel {
 		ene5.position(game.at(16, 9))
 	}
 }
+
 
