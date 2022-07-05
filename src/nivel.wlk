@@ -12,6 +12,7 @@ object pantallaDeInicio{
 	var imagen = false
 	method iniciarAnimacion(){
 		game.onTick(250,"Animacion del menu",{self.cambiar()})
+		musicaNivel.play()
 	}
 	method terminarAnimacion(){
 		game.removeTickEvent("Animacion del menu")
@@ -28,6 +29,7 @@ object pantallaDeInicio{
 		else
 			return "bombermanInicio.png"
 	}
+	
 	method volverAConsola() {
 		game.clear()
 		musicaNivel.stop()
@@ -42,10 +44,16 @@ object pantallaDePerder{
 		game.onTick(250,"Animacion del derrota",{self.image()})
 	}
 
-	method image(){return "perder.jpg"	}
+	method image(){return "perder.jpg"}
+	
+	method volverAConsola() {
+		game.clear()
+		musicaPerder.stop()
+		consola.iniciar()
+	}
 
 }
-	
+	  
 
 
 object pantallaDeVictoria{
@@ -68,7 +76,13 @@ object pantallaDeVictoria{
 		else
 			return "victoria2.png"
 	}
+	method volverAConsola() {
+		game.clear()
+		musicaFinal.stop()
+		consola.iniciar()
+	}
 }
+
 
 
 class Nivel{
@@ -76,6 +90,8 @@ class Nivel{
 	method keyboard(){
 	keyboard.space().onPressDo {protagonista.tirarBomba()}
 	keyboard.p().onPressDo({pantallaDeInicio.volverAConsola()})
+	keyboard.p().onPressDo({pantallaDePerder.volverAConsola()})
+	keyboard.p().onPressDo({pantallaDeVictoria.volverAConsola()})
 	}
 	
 	method configuracion() {

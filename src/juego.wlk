@@ -30,6 +30,8 @@ object juegoBomberman inherits Juego{
 		pantallaDeInicio.iniciarAnimacion()
 		keyboard.enter().onPressDo({nivel1.configuracion()})  
 		keyboard.p().onPressDo({pantallaDeInicio.volverAConsola()}) 
-		musicaNivel.play()	
+		keyboard.p().onPressDo({pantallaDePerder.volverAConsola()}) 
+		keyboard.p().onPressDo({pantallaDeVictoria.volverAConsola()}) 
+
 	}
 }

@@ -27,7 +27,11 @@ object musicaFinal{
 		ost.shouldLoop(true)
 		game.schedule(500, { ost.play()} )
 	}
+	method stop(){
+		ost.stop()
+	}
 }
+
 
 object musicaPerder{
 	var property ost = game.sound("loseTheme.mp3")
@@ -35,5 +39,8 @@ object musicaPerder{
 	method play(){
 		ost.shouldLoop(true)
 		game.schedule(500, { ost.play()} )
+	}
+	method stop(){
+		ost.stop()
 	}
 }

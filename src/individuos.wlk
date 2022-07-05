@@ -61,7 +61,7 @@ object protagonista inherits Individuos{
 	override method perderVida(){
 		vidas = vidas - 1
 		game.removeVisual(self)
-		game.schedule(510,{ => self.volverAlInicio() })
+		game.schedule(800,{ => self.volverAlInicio() })
 		if(vidas == 2){
 			corazones.cambiarACorazones2()
 		}
